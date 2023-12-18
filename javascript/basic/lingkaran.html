@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+ 
+</head>
+<body>
+  <h2>Hitung Luas dan Keliling Lingkaran Yukk!!!</h2>
+
+  <form>
+    <label for="jari2">Masukkan jari-jari lingkaran:</label>
+    <input type="number" id="jari2" name="jari2" required>
+
+    <button type="button" onclick="hitung()">Hitung</button>
+  </form>
+
+  <div id="Luas"></div>
+  <div id="keliling"></div> 
+  <script>
+    function hitung() {
+        var jari2 = document.getElementById('jari2').value;
+      var pi = 22/7;
+      var luas = pi * jari2 * jari2;
+      var keliling = 2 * pi * jari2;
+
+      document.getElementById('Luas').innerHTML = `Luas Lingkaran: ${luas} cm2`;
+      document.getElementById('keliling').innerHTML =  `Keliling Lingkaran: ${keliling} cm`;
+    }
+  </script>
+</body>
+</html>
